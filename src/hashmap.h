@@ -1,9 +1,9 @@
 /*
  | HashMap implementation in C programming language.
  | author: andydevs69420
- | Copyright (C) andydevs69420 2022 All rights reserved
+ | description: HashMap with key and value type of char * | char[]
+ | Copyright (C) andydevs69420 2022 All rights reserved.
  */
-
 
 
 #ifdef __cplusplus
@@ -21,14 +21,16 @@ typedef struct MAPENTRY MapEntry;
 typedef struct MAPENTRY {
     char *key;
     char *val;
-    MapEntry **tail;
+    MapEntry *tail;
 
     // methods
     void (*update_or_insert)(MapEntry*, MapEntry*);
+    char *(*match_until)(MapEntry*, char*);
 } MapEntry;
 
 MapEntry *new_MapEntry(char*, char *);
 void update_or_insert(MapEntry*, MapEntry*);
+char *match_until(MapEntry*, char*);
 
 typedef struct HASHMAP HashMap;
 typedef struct HASHMAP {
