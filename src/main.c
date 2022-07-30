@@ -35,6 +35,15 @@ int main(int argc, char **args)
         Yellow: #ffff00
     **/
 
+    colors->get(colors, "Green");
+    /** OUTPUT: 
+        $ ./compile-linux.sh 
+        Blue: #0000ff
+        White: #ffffff
+        Yellow: #ffff00
+        KeyError: key "Green" does not exist !!!
+    **/
+
     free(colors);
     return 0;
 }
