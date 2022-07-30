@@ -43,12 +43,18 @@ void update_or_insert(MapEntry *self, MapEntry *new_entry)
     {   self->val = new_entry->val;
         return; }
     
-    MapEntry *tail = self;
-    while (tail->tail != NULL)
-        tail = tail->tail;
-    tail->tail = new_entry;
+    MapEntry *head_or_tail = self;
+    while (head_or_tail->tail != NULL)
+        head_or_tail = head_or_tail->tail;
+    head_or_tail->tail = new_entry;
 }
 
+/**
+ * @brief Matches if linked list
+ * @param self MapEntry*
+ * @param _key char*
+ * @return char* 
+ */
 char *match_until(MapEntry *self, char *_key)
 {
     if (strcmp(self->key, _key) == 0) return self->val;
