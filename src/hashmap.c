@@ -54,7 +54,7 @@ void update_or_insert(MapEntry *self, MapEntry *new_entry)
  * @param self MapEntry*
  * @param _key char*
  * @return char* 
- */
+ **/
 char *match_until(MapEntry *self, char *_key)
 {
     if (strcmp(self->key, _key) == 0) return self->val;
