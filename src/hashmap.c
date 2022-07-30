@@ -82,7 +82,7 @@ char *match_until(MapEntry *self, char *_key)
 HashMap *new_HashMap()
 {
     HashMap *hashmap = (HashMap*) malloc(sizeof(HashMap));
-        hashmap->default_size = 16; // 16 by default
+        hashmap->default_size = 1; // 16 by default
         hashmap->element_size =  0;
 
         // GENERATE BUCKET 
@@ -92,7 +92,7 @@ HashMap *new_HashMap()
         hashmap->put = put;
         hashmap->get = get;
         hashmap->rehash  = rehash;
-        hashmap->hashKey = hashKey; 
+        hashmap->hashKey = hashKey;
     return hashmap;
 }
 
@@ -181,7 +181,7 @@ void rehash(HashMap *self)
             head_to_tail = head_to_tail->tail;
         }
     }
-                
+    free(bucket_copy);
 }
 
 /**
