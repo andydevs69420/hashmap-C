@@ -1,7 +1,7 @@
 # hashmap-c
 HashMap implementation in C programming language.
 
-## Description :flame:
+## Description :fire:
 
 ## USAGE:
 ```c
