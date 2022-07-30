@@ -2,6 +2,8 @@
 HashMap implementation in C programming language.
 
 ## Description :fire:
+Simple HashMap implementation in C programming language. <br>
+Uses char* datatype as key and value.
 
 ## USAGE:
 ```c
