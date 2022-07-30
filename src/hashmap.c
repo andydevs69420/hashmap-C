@@ -125,7 +125,7 @@ void put(HashMap *self, char *_key, char *_val)
     /*
      | calculate load factor, 
      | if load factor is greater than 0.75
-     | we need to rehash so that new entr(y | eis) will fit.
+     | we need to rehash so that new entr(y | ies) will fit.
      */
 
     int load_factor = (double) self->element_size / self->default_size;
