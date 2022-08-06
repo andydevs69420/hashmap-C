@@ -1,4 +1,4 @@
-# hashmap-c
+# hashmap-C
 HashMap implementation in C programming language.
 
 ## Description :fire:
